@@ -1,7 +1,7 @@
 {
-  "name": "@marvin-dss/server-endpoint",
+  "name": "@cameronwp/server-endpoint",
   "version": "0.0.1",
-  "description": "Simplified server for socket.io messaging. See @marvin-dss/client-endpoint.",
+  "description": "Simplified server for socket.io messaging. See @cameronwp/client-endpoint.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -17,13 +17,13 @@
   },
   "homepage": "https://github.com/cameronwp/server-endpoint#readme",
   "devDependencies": {
-    "@marvin-dss/client-endpoint": "^0.0.1",
+    "@cameronwp/client-endpoint": "^0.0.1",
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
     "mocha": "^3.2.0"
   },
   "dependencies": {
-    "@marvin-dss/endpoint": "^0.1.0",
+    "@cameronwp/endpoint": "^0.1.0",
     "express": "^4.15.2",
     "socket.io": "^1.7.3"
   },
