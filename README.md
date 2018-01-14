@@ -2,10 +2,10 @@
 
 _The server side of simplified socket.io messaging._
 
-See also [client-endpoint](https://github.com/cameronwp/client-endpoint).
+See also [@cameronwp/client-endpoint](https://github.com/cameronwp/client-endpoint).
 
 ```sh
-npm i -S server-endpoint
+npm i -S @cameronwp/server-endpoint
 ```
 
 ## Sample Usage
