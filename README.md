@@ -16,7 +16,7 @@ All examples assume that on{message,request} handlers were set before any {messa
 // server.js
 const ServerEndpoint = require('@cameronwp/server-endpoint');
 
-const port = '8000';
+const port = 8000;
 const server = new ServerEndpoint(port);
 const namespace = server.createNamespace('chat'); // create as many namespaces as you want
 
@@ -64,6 +64,8 @@ client.request('test-request-doubler-function', 2).then(console.log); // logs 4
 
 <dl>
 <dt><a href="#Namespace">Namespace</a> ⇐ <code>Endpoint</code></dt>
+<dd></dd>
+<dt><a href="#ServerEndpoint">ServerEndpoint</a></dt>
 <dd></dd>
 <dt><a href="#ServerEndpoint">ServerEndpoint</a></dt>
 <dd></dd>
@@ -136,18 +138,62 @@ Sets up request handlers.
 **Kind**: global class
 
 * [ServerEndpoint](#ServerEndpoint)
-    * [new ServerEndpoint(io)](#new_ServerEndpoint_new)
+    * [new ServerEndpoint()](#new_ServerEndpoint_new)
+    * [new ServerEndpoint(port)](#new_ServerEndpoint_new)
     * [.createNamespace([name])](#ServerEndpoint+createNamespace) ⇒ [<code>Namespace</code>](#Namespace)
 
 <a name="new_ServerEndpoint_new"></a>
 
-#### new ServerEndpoint(io)
+#### new ServerEndpoint()
 A factory for creating namespaced socket.io servers.
 
+<a name="new_ServerEndpoint_new"></a>
 
-| Param | Type | Description |
-| --- | --- | --- |
-| io | <code>Socket</code> | Socket.io server. Probably received from SocketServer. |
+#### new ServerEndpoint(port)
+Create a new ServerEndpoint.
+
+**Returns**: this
+
+| Param | Type |
+| --- | --- |
+| port | <code>number</code> |
+
+<a name="ServerEndpoint+createNamespace"></a>
+
+#### serverEndpoint.createNamespace([name]) ⇒ [<code>Namespace</code>](#Namespace)
+Create handlers for communications. Must create a namespace before ServerEndpoint is usable!
+
+**Kind**: instance method of [<code>ServerEndpoint</code>](#ServerEndpoint)
+
+| Param | Type |
+| --- | --- |
+| [name] | <code>string</code> |
+
+<a name="ServerEndpoint"></a>
+
+### ServerEndpoint
+**Kind**: global class
+
+* [ServerEndpoint](#ServerEndpoint)
+    * [new ServerEndpoint()](#new_ServerEndpoint_new)
+    * [new ServerEndpoint(port)](#new_ServerEndpoint_new)
+    * [.createNamespace([name])](#ServerEndpoint+createNamespace) ⇒ [<code>Namespace</code>](#Namespace)
+
+<a name="new_ServerEndpoint_new"></a>
+
+#### new ServerEndpoint()
+A factory for creating namespaced socket.io servers.
+
+<a name="new_ServerEndpoint_new"></a>
+
+#### new ServerEndpoint(port)
+Create a new ServerEndpoint.
+
+**Returns**: this
+
+| Param | Type |
+| --- | --- |
+| port | <code>number</code> |
 
 <a name="ServerEndpoint+createNamespace"></a>
 
